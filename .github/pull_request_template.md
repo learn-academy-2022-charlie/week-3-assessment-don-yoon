@@ -1,4 +1,4 @@
-# Submitting Week 2 Assessment
+# Submitting Week 3 Assessment
 
 ### ✅ Completed Files
 Mark the following as confirmation that the files in this repository are complete.

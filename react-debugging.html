@@ -61,24 +61,39 @@
             padding: "10px"
           }
           // No need to change anything ABOVE this line ^
+       
+          return (
+          /* There is no JSX fragment. Functions can only have 1 return and without the fragment, all nodes will be considered as multiple returns 
+          Another interesting thing I found out was that you only need curly brackets to comment when inside the JSX fragment or other html elements */
+           
+            
+            <>
 
-          return(
-            <h1>Draw a Card</h1>
-            <button onClick={}>
-              Click to Draw a Card
-            </button>
-            <button onClick={shuffle}>
-              Return Cards and Shuffle Deck
-            </button>
-            <div style={handStyles}>
-              {this.state.hand.map((card, index) => {
-                return (
-                  <div style={cardStyles} key={index}>
-                    {card}
-                  </div>
-                )
-              })}
-            </div>
+             <h1>Draw a Card</h1>
+
+                {/* button is missing a method call onClick.
+                Add this.drawCard} to <button onClick={}> */}
+                <button onClick={this.drawCard}>
+                  Click to Draw a Card
+                </button>
+                             
+                {/* Incorrect method call, requires this.shuffle
+                <button onClick={shuffle}> */}
+                <button onClick={this.shuffle}>  
+                  Return Cards and Shuffle Deck
+                </button>
+              
+                <div style={handStyles}>
+                  {this.state.hand.map((card, index) => {
+                    return (
+                      <div style={cardStyles} key={index}>
+                        {card}
+                      </div>
+                    )
+                  })}
+                </div>
+            </>
+            
           )
         }
       }
